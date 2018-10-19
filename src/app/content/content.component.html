@@ -1,0 +1,75 @@
+      <div class="col-lg-12">
+        <div class="column">
+            <label for="accountId" class="col-sm-6 col-form-label">Account ID </label>
+            <div class="col-sm-12 col-m-6">
+              <input type="text" class="form-control" [(ngModel)]="accountId">
+            </div>
+        </div>
+        <div class="column">
+            <label for="companyId" class="col-sm-6 col-form-label">Company ID </label>
+            <div class="col-sm-12 col-m-6">
+              <input type="text" class="form-control" [(ngModel)]="comapnyID">
+            </div>
+        </div>
+        <div class="column">
+            <label for="svAccountId" class="col-sm-6 col-form-label">SV Item ID </label>
+            <div class="col-sm-12 col-m-6">
+              <input type="text" class="form-control" [(ngModel)]="svAccountId">
+            </div>
+        </div>
+        <div class="column">
+            <label for="svAccountId" class="col-sm-1 col-form-label">&nbsp;</label>
+            <div class="col-sm-12 col-m-6">
+            <button type="button" class="btn btn-primary" (click)="onSearch($event)">Search</button>
+            <label for="svAccountId" class="col-sm-1 col-form-label">&nbsp;</label>
+            <button type="button" class="btn" >Reset</button>
+            </div>
+          </div>
+        <div >
+            <table class="table table-bordered" style="left:0px;" style="display :block;">
+                <thead class="table-sm table-dark">
+                  <tr>
+                    <th *ngFor="let item of collectionData">{{item['workflowSystem']}}</th>
+                    <!--<th>Successfull</th>
+                    <th>successed with warnings</th>
+                    <th>failed </th>
+                    <th>in-progress</th>
+                    <th>not yet started</th>
+                    <th>future use</th>-->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <img [src]="getImage()" style="height: 30px; width:75px;" /> </td>
+                    <td>
+                      <input type="checkbox" class="css-checkbox" [checked]="true" />
+                      <label for="checkbox1" name="checkbox1_lbl" [class]="cssClassVar">&nbsp;</label>
+                    </td>
+                    <td>
+                      <input type="checkbox" id="checkbox2" class="css-checkbox" checked="checked" />
+                      <label for="checkbox2" name="checkbox2_lbl" class="css-label lite-orange-check">successed with warnings</label>
+                    </td>
+                    <td>
+                      <input type="checkbox" id="checkbox3" class="css-checkbox" checked="checked" />
+                      <label for="checkbox3" name="checkbox2_lbl" class="css-label lite-red-check">failed</label>
+                    </td>
+                    <td>
+                      <input type="checkbox" id="checkbox5" class="css-checkbox" checked="checked" />
+                      <label for="checkbox5" name="checkbox2_lbl" class="css-label lite-blue-check">in-progress</label>
+                    </td>
+                    <td>
+                      <input type="checkbox" class="css-checkbox" id="checkbox4" checked="checked" />
+                      <label for="checkbox4" name="checkbox1_lbl" class="css-label lite-gray-check">not yet started</label>
+                    </td>
+                    <td>
+                      <input type="checkbox" id="checkbox6" class="css-checkbox" checked="checked" />
+                      <label for="checkbox6" name="checkbox2_lbl" class="css-label lite-cyan-check">Cyan Check</label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+         </div>  
+</div>
+
+
